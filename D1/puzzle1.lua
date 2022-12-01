@@ -33,4 +33,4 @@ function puzzle1()
     return totals
 end
 
---print(puzzle1()[#puzzle1()])
+print(puzzle1()[1]) -- 70369
