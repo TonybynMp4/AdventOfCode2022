@@ -6,9 +6,9 @@ local function lines_from(file)
     return lines
 end
 
-local file = 'input1.txt'
+local file = 'D1/input1.txt'
 
-local function day1()
+function puzzle1()
     local input = lines_from(file)
     local totaltable = {}
     local temptable = {}
@@ -29,8 +29,8 @@ local function day1()
         end
         totals[#totals+1] = temptotal
     end
-    table.sort( totals )
-    return totals[#totals]
+    table.sort( totals, function(a,b) return b < a end)
+    return totals
 end
 
-print(day1())
+--print(puzzle1()[#puzzle1()])
