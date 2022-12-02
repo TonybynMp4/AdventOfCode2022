@@ -21,6 +21,10 @@ function puzzle1()
                 match.adversary = Letter
             end
         end
+
+        -- Adversary plays -> A: Rock B: Paper C: Scissors
+        -- You should play -> X: Rock Y: Paper Z: Scissors
+
         local outcome
         if match.adversary == 'A' then
             outcome = (match.shouldplay == 'Y' and 'win') or (match.shouldplay == 'X' and 'draw') or 'lost'
