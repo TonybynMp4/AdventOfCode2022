@@ -39,4 +39,4 @@ function puzzle1()
     return totalscore
 end
 
-print("Total Score: " .. puzzle1()) -- 13924
+print("Total Score: " .. puzzle1()) -- 13924 Points
