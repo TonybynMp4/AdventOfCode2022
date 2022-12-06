@@ -3,7 +3,8 @@ def puzzle1():
     Line = file.read()
 
     for i in range(0, len(Line) - 1):
-        Letters = [Line[i], Line[i+1], Line[i+2], Line[i+3]]
+        Letters = []
+        Letters.append(Line[i:i+4])
         LetterString = ''.join(Letters)
         check = []
         for u in LetterString:
