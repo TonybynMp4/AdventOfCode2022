@@ -12,4 +12,4 @@ def puzzle2():
         if len(check) == 14:
             return Line.find(LetterString) + 14
 
-print(puzzle1())
+print(puzzle2())
