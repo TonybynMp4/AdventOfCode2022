@@ -8,7 +8,7 @@ end
 
 local file = 'D2/input1.txt'
 
-function puzzle1()
+function puzzle2()
     local input = lines_from(file)
     local totalscore = 0
 
