@@ -1,15 +1,15 @@
 def puzzle1():
-    file = open('D6/input.txt', 'r')
-    Line = file.read()
+    file = open('D4/input.txt', 'r')
+    Lines = file.readlines()
 
-    for i in range(0, len(Line) - 1):
-        Letters = [Line[i], Line[i+1], Line[i+2], Line[i+3]]
-        LetterString = ''.join(Letters)
-        check = []
-        for u in LetterString:
-            if LetterString.count(u) == 1:
-                check.append(u)
-        if len(check) == 4:
-            return Line.find(LetterString) + 4
+    overlapping = 0
+    for pair in Lines:
+        pair = pair.strip()
+        assignement1, assignement2 = pair.split(',')
+        assignement1_1, assignement1_2 = map(int, assignement1.split('-'))
+        assignement2_1, assignement2_2 = map(int, assignement2.split('-'))
+        if (assignement1_1 <= assignement2_1 and assignement1_2 >= assignement2_2) or (assignement2_1 <= assignement1_1 and assignement2_2 >= assignement1_2):
+            overlapping += 1
+    return overlapping
 
 print(puzzle1())
