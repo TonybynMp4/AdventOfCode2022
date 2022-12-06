@@ -1,5 +1,5 @@
 
-def puzzle1():
+def puzzle2():
     file = open('D4/input.txt', 'r')
     Lines = file.readlines()
 
