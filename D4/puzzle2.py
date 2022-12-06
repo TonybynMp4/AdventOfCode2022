@@ -13,4 +13,4 @@ def puzzle2():
             overlapping += 1
     return overlapping
 
-print(puzzle1())
+print(puzzle2())
